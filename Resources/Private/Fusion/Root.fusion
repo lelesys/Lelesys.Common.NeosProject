@@ -1,0 +1,17 @@
+prototype(Neos.Neos:Content) {
+    attributes.class = ${q(node).property('class')}
+    @process.wrapper {
+        expression = ${q(node).property('wrap') ? '<div class="' + q(node).property('wrap') + '">' + value + '</div>' : value}
+        @position = 'end 9999999999'
+    }
+}
+
+prototype(Neos.NodeTypes.ColumnLayouts:MultiColumn) {
+    attributes.class >
+    attributes.class = 'row'
+}
+
+prototype(Neos.NodeTypes.ColumnLayouts:MultiColumnItem) {
+    attributes.class >
+    attributes.class = ${q(node).parent().property('_nodeType.name') == 'Neos.NodeTypes:TwoColumn' ? 'col-12 col-md-6' : 'col-12 col-md-12'}
+}

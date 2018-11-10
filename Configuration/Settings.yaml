@@ -1,0 +1,15 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        Lelesys.Common.NeosProject: true
+    userInterface:
+      translation:
+        autoInclude:
+          Lelesys.Common.NeosProject:
+            - 'NodeTypes/*'
+Lelesys:
+  Common:
+    NeosProject:
+      contentWrappers: []
+      contentCssClasses: []

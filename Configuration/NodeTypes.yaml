@@ -1,0 +1,30 @@
+'Neos.Neos:Content':
+  ui:
+    inspector:
+      groups:
+        wrapping:
+          label: 'Lelesys.Common.NeosProject:NodeTypes.NeosNeosContent:groups.wrapping'
+          icon: 'icon-code'
+  properties:
+    class:
+      type: string
+      ui:
+        label: 'Lelesys.Common.NeosProject:NodeTypes.NeosNeosContent:properties.class'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'wrapping'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            dataSourceIdentifier: 'lelesys-common-neosproject-content-css-classes'
+    wrap:
+      type: string
+      ui:
+        label: 'Lelesys.Common.NeosProject:NodeTypes.NeosNeosContent:properties.wrap'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'wrapping'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            dataSourceIdentifier: 'lelesys-common-neosproject-content-wrappers'
