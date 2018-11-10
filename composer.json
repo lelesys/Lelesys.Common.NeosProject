@@ -1,0 +1,22 @@
+{
+    "description": "Common stuff which can be useful for Neos based website integration",
+    "type": "neos-package",
+    "name": "lelesys/common-neosproject",
+    "license": [
+        "GPL-3.0-or-later"
+    ],
+    "require": {
+        "neos/neos": "^4.0",
+        "neos/nodetypes-columnlayouts": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lelesys\\Common\\NeosProject\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Lelesys.Common.NeosProject"
+        }
+    }
+}
