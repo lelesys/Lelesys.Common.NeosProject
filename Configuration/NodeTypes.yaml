@@ -1,4 +1,5 @@
-'Neos.Neos:Content':
+'Lelesys.Common.NeosProject:Wrapping':
+  abstract: true
   ui:
     inspector:
       groups:
@@ -7,7 +8,8 @@
           icon: 'icon-code'
   properties:
     class:
-      type: string
+      type: array
+      defaultValue: []
       ui:
         label: 'Lelesys.Common.NeosProject:NodeTypes.NeosNeosContent:properties.class'
         reloadPageIfChanged: true
@@ -17,8 +19,10 @@
           editorOptions:
             allowEmpty: true
             dataSourceIdentifier: 'lelesys-common-neosproject-content-css-classes'
+            minimumResultsForSearch: 0
     wrap:
-      type: string
+      type: array
+      defaultValue: []
       ui:
         label: 'Lelesys.Common.NeosProject:NodeTypes.NeosNeosContent:properties.wrap'
         reloadPageIfChanged: true
@@ -28,3 +32,28 @@
           editorOptions:
             allowEmpty: true
             dataSourceIdentifier: 'lelesys-common-neosproject-content-wrappers'
+            minimumResultsForSearch: 0
+
+'Neos.Neos:Content':
+  superTypes:
+    'Lelesys.Common.NeosProject:Wrapping': true
+
+'Neos.Neos:ContentCollection':
+  superTypes:
+    'Lelesys.Common.NeosProject:Wrapping': true
+
+'Neos.NodeTypes.ColumnLayouts:Column':
+  properties:
+    class:
+      defaultValue: ['row']
+    layout: ~
+
+'Lelesys.Common.NeosProject:Container':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    icon: 'icon-folder-open-alt'
+    label: 'i18n'
+  childNodes:
+    content:
+      type: 'Neos.Neos:ContentCollection'

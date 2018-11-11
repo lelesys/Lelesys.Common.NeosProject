@@ -6,10 +6,10 @@
             <source>Wrapping</source>
         </trans-unit>
         <trans-unit id="properties.class" xml:space="preserve">
-            <source>CSS Class</source>
+            <source>Element Styles</source>
         </trans-unit>
         <trans-unit id="properties.wrap" xml:space="preserve">
-            <source>Wrapper Element</source>
+            <source>Element Wrapper Styles</source>
         </trans-unit>
     </body>
     </file>
