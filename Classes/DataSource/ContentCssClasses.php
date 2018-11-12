@@ -31,6 +31,21 @@ class ContentCssClasses extends AbstractDataSource
      */
     public function getData(NodeInterface $node = null, array $arguments)
     {
-        return $this->settings['contentCssClasses'];
+        $out = array();
+        if (isset($arguments['keys'])) {
+            if (! is_array($arguments['keys'])) {
+                return $out;
+            }
+            foreach ($arguments['keys'] as $singleKey) {
+                if (isset($this->settings['contentCssClasses'][$singleKey])) {
+                    $out = array_merge($out, $this->settings['contentCssClasses'][$singleKey]);
+                }
+            }
+            return $out;
+        }
+        foreach ($this->settings['contentCssClasses'] as $value) {
+            $out = array_merge($out, $value);
+        }
+        return $out;
     }
 }
