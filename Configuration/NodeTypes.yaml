@@ -12,7 +12,7 @@
       defaultValue: []
       ui:
         label: 'Lelesys.Common.NeosProject:NodeTypes.NeosNeosContent:properties.class'
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: 'wrapping'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
@@ -25,7 +25,7 @@
       defaultValue: []
       ui:
         label: 'Lelesys.Common.NeosProject:NodeTypes.NeosNeosContent:properties.wrap'
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: 'wrapping'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'

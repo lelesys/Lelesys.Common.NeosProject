@@ -24,6 +24,5 @@ prototype(Neos.NodeTypes.ColumnLayouts:MultiColumnItem) {
 prototype(Lelesys.Common.NeosProject:Container) {
     content = Neos.Neos:ContentCollection {
         nodePath = 'content'
-        attributes.class = 'container'
     }
 }
