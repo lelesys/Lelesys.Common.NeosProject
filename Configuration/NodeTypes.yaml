@@ -20,6 +20,13 @@
             allowEmpty: true
             dataSourceIdentifier: 'lelesys-common-neosproject-content-css-classes'
             minimumResultsForSearch: 0
+    classInput:
+      type: string
+      ui:
+        label: 'Lelesys.Common.NeosProject:NodeTypes.NeosNeosContent:properties.classInput'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'wrapping'
     wrap:
       type: array
       defaultValue: []
