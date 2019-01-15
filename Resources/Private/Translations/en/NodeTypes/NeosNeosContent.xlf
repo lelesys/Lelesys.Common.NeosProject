@@ -14,6 +14,9 @@
         <trans-unit id="properties.classInput" xml:space="preserve">
             <source>Element Styles (extra)</source>
         </trans-unit>
+        <trans-unit id="properties.wrapInput" xml:space="preserve">
+            <source>Element Wrapper Styles (extra)</source>
+        </trans-unit>
     </body>
     </file>
 </xliff>

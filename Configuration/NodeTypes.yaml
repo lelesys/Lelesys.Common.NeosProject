@@ -40,6 +40,13 @@
             allowEmpty: true
             dataSourceIdentifier: 'lelesys-common-neosproject-content-wrappers'
             minimumResultsForSearch: 0
+    wrapInput:
+      type: string
+      ui:
+        label: 'Lelesys.Common.NeosProject:NodeTypes.NeosNeosContent:properties.wrapInput'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'wrapping'
 
 'Neos.Neos:Content':
   superTypes:

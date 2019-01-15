@@ -1,15 +1,23 @@
 prototype(Neos.Neos:Content) {
     attributes.class = ${(q(node).property('class') ? Array.join(q(node).property('class'), ' ') : '') + (q(node).property('classInput') ? ' ' + q(node).property('classInput') : '')}
+    wrapClasses = ${q(node).property('wrap') ? Array.join(q(node).property('wrap'), ' ') : ''}
+    wrapClasses.@process.extra {
+        expression = ${q(node).property('wrapInput') ? value + ' ' + q(node).property('wrapInput') : value}
+    }
     @process.wrapper {
-        expression = ${q(node).property('wrap') ? '<div class="' + Array.join(q(node).property('wrap'), ' ') + '">' + value + '</div>' : value}
+        expression = ${this.wrapClasses ? '<div class="' + this.wrapClasses + '">' + value + '</div>' : value}
         @position = 'end 9999999999'
     }
 }
 
 prototype(Neos.Neos:ContentCollection) {
     attributes.class = ${(q(node).property('class') ? Array.join(q(node).property('class'), ' ') : '') + (q(node).property('classInput') ? ' ' + q(node).property('classInput') : '')}
+    wrapClasses = ${q(node).property('wrap') ? Array.join(q(node).property('wrap'), ' ') : ''}
+    wrapClasses.@process.extra {
+        expression = ${q(node).property('wrapInput') ? value + ' ' + q(node).property('wrapInput') : value}
+    }
     @process.wrapper {
-        expression = ${q(node).property('wrap') ? '<div class="' + Array.join(q(node).property('wrap'), ' ') + '">' + value + '</div>' : value}
+        expression = ${this.wrapClasses ? '<div class="' + this.wrapClasses + '">' + value + '</div>' : value}
         @position = 'end 9999999999'
     }
 }
