@@ -21,16 +21,19 @@ prototype(Neos.Neos:ContentCollection) {
         @position = 'end 9999999999'
     }
 }
-prototype(Neos.NodeTypes.ColumnLayouts:MultiColumn) {
-    attributes.class >
-}
-
-prototype(Neos.NodeTypes.ColumnLayouts:MultiColumnItem) {
-    attributes.class >
-}
 
 prototype(Lelesys.Common.NeosProject:Container) {
     content = Neos.Neos:ContentCollection {
         nodePath = 'content'
     }
+}
+
+prototype(Neos.NodeTypes.ColumnLayouts:MultiColumn) {
+    attributes.class >
+    attributes.class = 'row'
+}
+
+prototype(Neos.NodeTypes.ColumnLayouts:MultiColumnItem) {
+    attributes.class >
+    attributes.class = ${'col-12 col-lg-' + String.split(q(node).parent().property('layout'), '-')[columnIteration.index] + ' col-sm-' + String.split(q(node).parent().property('layout'), '-')[columnIteration.index]}
 }
