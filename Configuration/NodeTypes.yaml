@@ -6,6 +6,7 @@
         wrapping:
           label: 'Lelesys.Common.NeosProject:NodeTypes.NeosNeosContent:groups.wrapping'
           icon: 'icon-code'
+          collapsed: true
   properties:
     class:
       type: array
